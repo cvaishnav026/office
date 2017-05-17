@@ -1,0 +1,1248 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*<meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />*@
+    <meta charset="utf-8" />
+    <title>Dashboard </title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+            <script>
+                var appGlobal = {
+                    UserId:@Html.Raw(Json.Encode(ViewBag.UserId)),
+                    UserTypeId: @Html.Raw(Json.Encode(ViewBag.UserTypeId)),
+                    MainInstitutionId: @Html.Raw(Json.Encode(ViewBag.MainInstitutionId)),
+                    BranchInstitutionId: @Html.Raw(Json.Encode(ViewBag.BranchInstitutionId)),
+                    ScreenSkinId: @Html.Raw(Json.Encode(ViewBag.ScreenSkinId)),
+                    AcademicYearCurriculum:[]
+                };
+            </script>
+<style type="text/css">
+textarea {
+   resize: none;
+   }
+button[type=button]:disabled {
+    background: #A9A9A9;
+}
+.xyz {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+.popover-content{
+       border-style:inset;
+    border-width: 5px;
+    border-radius:5px;
+}
+</style>
+			<!-- Chat CSS start-->
+			
+		
+
+    <link rel='stylesheet prefetch' href='~/Content/Asserts/css/Roboto.css"rel="stylesheet'>
+
+      <link rel="stylesheet" href="~/Content/Asserts/css/chat_style.css"> 
+			
+			
+			<!-- Chat CSs end here -->
+			
+			
+			
+
+<link rel="stylesheet" href="~/Content/Asserts/css/animate.css">
+  <link rel="stylesheet" href="~/Content/Asserts/css/month.css" /> 
+
+    <link rel="stylesheet" media="screen" href="~/Content/Asserts/css/color-switcher.css">
+
+    <link href="~/Content/Asserts/css/dcalendar.picker.css" rel="stylesheet" type="text/css">
+	
+	 <link href="~/Content/Asserts/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+  
+
+	 <link rel="stylesheet" href="~/Content/Asserts/css/bootstrap-glyphicons.css" /> 
+
+	
+   <link rel="stylesheet" href="~/Content/Asserts/css/font-awesome/4.5.0/css/font-awesome.min.css" />
+	
+    <link rel="stylesheet" href="~/Content/Asserts/css/fonts.googleapis.com.css" /> 
+	
+	<link rel="stylesheet" href="~/Content/Asserts/css/normalize.css">
+	<link rel="stylesheet" href="~/Content/Asserts/css/main1.css">
+<!-- links and scripts for calender-->
+
+    <script src="~/Content/Asserts/js/moment@2.js"></script>
+    <script src="~/Content/Asserts/js/interactjs@1.js"></script>
+	
+<!-- links and scripts end -->
+    <link rel="stylesheet" href="~/Content/Asserts/css/kbr.min.css" class="kbr-main-stylesheet" id="main-kbr-style" />
+    <script src="~/Content/Asserts/js/moment.js"></script>
+	
+	<link rel="stylesheet" href="~/Content/Asserts/css/bootstrap.min.css">
+		
+		 
+
+<link rel="stylesheet" href="~/Content/Asserts/css/summernote.min.css" />
+
+
+<!--  DisableKeyInputDateField() start -->
+<script>
+function DisableKeyInputDateField(){
+	var e=event || window.event ;
+	e.returnValue=false;
+}
+
+</script>
+
+<!--  DisableKeyInputDateField() end -->
+
+<script src="~/Content/Asserts/js/jquery-2.1.3.min.js"></script>
+<script src="~/Content/Asserts/js/bootstrap.min.js"></script>
+<script src="~/Content/Asserts/js/bootbox.min.js"></script>
+<script src="~/Content/Asserts/js/summernote.min.js"></script>
+<script src="~/Content/Asserts/js/angular.min.js"></script>
+  <script src="~/Content/Asserts/js/angular-animate1.js"></script> 
+    <script src="~/Content/Asserts/js/ui-bootstrap-tpls.js"></script>
+    <script src="~/Content/Asserts/js/rrule@2.js"></script>
+    <script src="~/Content/Asserts/js/angular-bootstrap-colorpicker@3.js"></script>
+    <script src="~/Content/Asserts/js/angular-bootstrap-calendar.js"></script>
+
+<script src="~/Content/Asserts/js/angular-route.min.js"></script>
+<script src="~/Content/Asserts/js/angular-summernote.min.js"></script>
+
+
+
+
+
+ <script src="~/Content/Asserts/js/jquery.min3.js"></script>
+<script src="~/Content/Asserts/js/jquery-ui.min.js"></script>
+   <script>
+            $(function() {
+                var i = 1;
+                $(document).delegate('.pop', 'click', function(event) {
+                    new top.PopLayer({ 
+                       
+                        "content": "Demo"
+                    });
+                });
+            });
+        </script>
+<script src="~/Content/Asserts/js/modernizr-2.6.2.min.js"></script>
+<script src="~/Content/Asserts/js/angular-dragdrop.js"></script>
+    <script src="~/Content/Asserts/js/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="~/Content/Asserts/js/angular-sanitize.js"></script>
+
+ <!-- date picker -->
+	   <script src="~/Content/Asserts/js/angular-strap.min.js"></script>
+<script src="~/Content/Asserts/js/angular-strap.tpl.min.js"></script>	
+
+<script src="~/Content/Asserts/js/chart.min.js"></script>
+
+<link href="~/Content/Asserts/css/colorpicker.min.css" rel="stylesheet">
+    <link href="~/Content/Asserts/css/angular-bootstrap-calendar.min.css" rel="stylesheet">
+
+
+    <script src="~/Scripts/AppConfig.js"></script>
+    <script src="~/Scripts/appRoute.js"></script>
+    <script src="~/Scripts/util/appDefaults.js"></script>
+    <script src="~/Scripts/util/appCommon.js"></script>
+    <script src="~/Scripts/util/appresponsemessage.js"></script>
+    <link rel="stylesheet" href="~/Content/Asserts/css/main.css">
+	 	<link href="~/Content/Asserts/css/dualmultiselect.css" rel="stylesheet">
+	
+
+
+<!--	 CONTROLLER SCRIPTS -->
+    <!-- AssessmentActivityController -->
+    <script src="~/Scripts/Exam/controller/assessment_activity_controller.js"></script>
+	
+
+    <!-- AssessmentManagementController -->
+    <script src="~/Scripts/Exam/controller/assessment_management_controller.js"></script>
+   
+    <!-- ResultController -->
+    <script src="~/Scripts/Exam/controller/result_page_controller.js"></script>
+
+    <!-- QuestionManagementController -->
+	 <script src="~/Scripts/Exam/controller/question_management_controller.js"></script>
+
+    <!-- AdminManagementController -->
+	<script src="~/Scripts/AdminPanel/ctrl/admin_management_controller.js"></script>
+
+    <!-- AllocateManagementController -->
+    <script src="~/Scripts/Exam/controller/allocate_assessment_controller.js"></script>
+
+    <!-- MyAssessmentsController -->
+    <script src="~/Scripts/Exam/controller/my_assessments_controller.js"></script>
+	  <!-- ExaminationHallController -->
+    <script src="~/Scripts/Exam/controller/examinationHall_Controller.js"></script>
+	 <!-- ExaminationInvigilation -->
+    <script src="~/Scripts/Exam/controller/invigilator_controller.js"></script>
+	 <!-- ExaminationMarksEntry -->
+    <script src="~/Scripts/Exam/controller/examMarkEntry_controller.js"></script>
+	
+	
+	<!--faculty attendenece-->
+	    <script src="~/Scripts/Campus/controller/staff_attendence_controller.js"></script>
+	<!--student attendenece-->
+	    <script src="~/Scripts/Campus/controller/student_attendence_controller.js"></script>
+    <!--student subject attendenece-->
+	    <script src="~/Scripts/Campus/controller/student_subject_attendence_controller.js"></script>		
+		 <!--student attendenece  history-->
+	    <script src="~/Scripts/Campus/controller/student_attendence_history_controller.js"></script>
+	<!-- SectionManagementController -->
+	<script src="~/Scripts/Campus/controller/section_management_controller.js"></script>
+	<!-- academic Controller -->
+	<script src="~/Scripts/Campus/controller/academic_controller.js"></script>
+	<!-- Student-Section Controller -->
+	<script src="~/Scripts/Academics/controller/student_section_controller.js"></script>
+	
+	<!-- Teacher-Subject Controller -->
+	<script src="~/Scripts/Academics/controller/teacher_subject_controller.js"></script>
+	<!-- HOLIDAY MANAGEMENT CONTROLLER -->
+	<script src="~/Scripts/Campus/controller/holiday_controller.js"></script>
+	
+	<!-- SectionTimeTableController -->
+	<script src="~/Scripts/Campus/controller/time_table_controller.js"></script>
+	
+	<!--BranchAdminAssignController-->
+	<script src="~/Scripts/Campus/controller/admin_assign_controller.js"></script>
+
+		
+
+
+	<!-- InventoryManagement Controller -->
+	<script src="~/Scripts/Library/controller/inventory_management_controller.js"></script>
+
+	
+	<!-- Library Issue and Return Controller -->
+	<script src="~/Scripts/Library/controller/library_issue_controller.js"></script>
+	
+	
+	<!-- Library Configaration Controller -->
+	<script src="~/Scripts/Library/controller/library_configuration_controller.js"></script>
+	
+	
+	<!-- LaboratoryInventoryController -->
+    <script src="~/Scripts/Academics/controller/lab_inventory_controller.js"></script>
+		
+   <!--staffAttendenceHistoryController-->
+    <script src="~/Scripts/Campus/controller/staff_attendence_history_controller.js"></script>
+	 <!--studentSubjectAttendenceHistoryController-->
+    <script src="~/Scripts/Campus/controller/student_subject_history_controller.js"></script>
+	
+	<!-- CurriculumSyllabusController -->
+    <script src="~/Scripts/Academics/controller/curriculum_syllabus_controller.js"></script>
+	<!-- StudentManagement Controller -->
+    <script src="~/Scripts/Academics/controller/student_management_controller.js"></script>
+	<!-- Subject Management-->
+	<script src="~/Scripts/Academics/controller/subject_management_controller.js"></script>
+	<!-- SyllabusManagementController -->
+    <script src="~/Scripts/Academics/controller/syllabusManagement_controller.js"></script>
+	<!-- ClassManagementController -->
+    <script src="~/Scripts/Academics/controller/classManagement_Controller.js"></script>
+	
+
+	<!--ExamManagement Controller-->
+		<script src="~/Scripts/Exam/controller/exam_management_controller.js"></script>
+
+<!--ExamAllocatescheduleController-->
+		<script src="~/Scripts/Exam/controller/exam_allocate_schedule_controller.js"></script>
+
+	<!-- VehicleManagementController -->
+    <script src="~/Scripts/Transportation/controller/vehicle_management_controller.js"></script>
+	
+	<!-- RouteManagementController -->
+    <script src="~/Scripts/Transportation/controller/route_management_controller.js"></script>
+	
+	<!-- VehicleStatisticsController -->
+    <script src="~/Scripts/Transportation/controller/vehicle_statistics_controller.js"></script>
+	
+	<!-- VehicleDriverAssignController -->
+    <script src="~/Scripts/Transportation/controller/vehicle_driver_assign_controller.js"></script>
+	<!-- Vehicle Daily Trip Controller -->
+	<script src="~/Scripts/Transportation/controller/daily_trip_readiness_controller.js"></script>
+
+	<!-- SERVICE SCRIPTS -->
+	<!-- Common Script -->
+	<script src="~/Scripts/Popup.js"></script>
+	<!--ExamAllocatescheduleservice-->
+	<script src="~/Scripts/Exam/service/exam_allocate_schedule_service.js"></script>
+	<!-- AssessmentActivityService -->
+	<script src="~/Scripts/Exam/service/assessment_activity_service.js"></script>
+	<!-- QuestionManagementService-->
+	<script src="~/Scripts/Exam/service/question_management_service.js"></script>
+
+	<!-- Assessment ManagementService-->
+	<script src="~/Scripts/Exam/service/assessment_management_service.js"></script>
+	
+	<!--AdminManagementService-->
+	<script src="~/Scripts/AdminPanel/services/admin_management_service.js"></script>
+
+	<!--AllocateManagementService-->
+		<script src="~/Scripts/Exam/service/allocate_management_service.js"></script>
+	<!--MyAssessmentsService-->
+	    <script src="~/Scripts/Exam/service/my_assessments_service.js"></script>
+		<!--ExaminationHallService-->
+	    <script src="~/Scripts/Exam/service/ExaminationHall_service.js"></script>
+		<!--ExaminationInvilationService-->
+	    <script src="~/Scripts/Exam/service/invigilator_service.js"></script>
+		<!--ExaminationMarkEntryService-->
+	    <script src="~/Scripts/Exam/service/examMarkEntry_service.js"></script>
+		
+		
+		
+	<!--Result PageService-->
+			<script src="~/Scripts/Exam/service/result_page_service.js"></script>
+	
+	<!--Faculty attendence-->
+		    <script src="~/Scripts/Campus/service/staff_attendence_service.js"></script>
+	<!--Student attendence-->
+		    <script src="~/Scripts/Campus/service/student_attendence_service.js"></script>	
+			<!--Student attendence history-->
+		    <script src="~/Scripts/Campus/service/student_attendence_history_service.js"></script>
+			<!--Student Subject attendence history-->
+		    <script src="~/Scripts/Campus/service/student_subject_history_service.js"></script>
+			
+     <!--Student attendence-->
+		    <script src="~/Scripts/Campus/service/student_subject_attendence_service.js"></script>			
+<!--certificate_design sevice -->
+  <script src="~/Scripts/Campus/service/certificate_design_service.js"></script>	
+	<!-- SectionManagementService -->
+	<script src="~/Scripts/Campus/service/section_management_service.js"></script>
+	
+	<!-- Student-Section Service -->
+	<script src="~/Scripts/Academics/service/student_section_service.js"></script>
+	
+		<!-- Teacher-Subject Service -->
+	<script src="~/Scripts/Academics/service/teacher_subject_service.js"></script>
+	<!-- HOLIDAY MANAGEMENT SERVICE -->
+	<script src="~/Scripts/Campus/service/holiday_management_service.js"></script>
+<!-- Academeic SERVICE -->
+	<script src="~/Scripts/Campus/service/academic_service.js"></script>
+	<!-- SectionTimeTableService -->
+	<script src="~/Scripts/Campus/service/time_table_service.js"></script>
+<!-- GuestScreen VIew Configuration -->
+<script src="~/Scripts/Campus/service/guest_screen_service.js"></script>
+	<!--BranchAdminAssignservice-->
+	<script src="~/Scripts/Campus/service/admin_assign_service.js"></script>
+	
+	<!--Campus Calender Service -->
+	<script src="~/Scripts/Campus/service/campus_calendar_service.js"></script>
+	
+	<!-- LaboratoryInventoryService -->
+	<script src="~/Scripts/Academics/service/lab_inventory_service.js"></script>
+	
+    <!--StaffattendenceHistoryservice-->
+	  <script src="~/Scripts/Campus/service/staff_attendence_history_service.js"></script>
+	  
+	 <!-- CurriculumSyllabusService -->
+	<script src="~/Scripts/Academics/service/curriculum_syllabus_service.js"></script>
+	<!-- Subject Mangement-->
+      <script src="~/Scripts/Academics/service/subject_management_service.js"></script>
+	  
+	 <!-- StudentManagementService -->
+	<script src="~/Scripts/Academics/service/student_management_service.js"></script>
+	
+	<!-- VehicleManagementService -->
+	<script src="~/Scripts/Transportation/service/vehicle_management_service.js"></script>
+	
+	<!-- RouteManagementService -->
+	<script src="~/Scripts/Transportation/service/route_management_service.js"></script>
+	
+	<!-- VehicleStatisticsService -->
+	<script src="~/Scripts/Transportation/service/vehicle_statistics_service.js"></script>
+	
+	<!-- VehicleDriverAssingService -->
+	<script src="~/Scripts/Transportation/service/vehicle_driver_assign_service.js"></script>
+	<!--VehicleDailyReadiness-->
+	<script src="~/Scripts/Transportation/service/daily_trip_readiness_service.js"></script>
+	 <!-- SyllabusManagementService -->
+	<script src="~/Scripts/Academics/service/syllabusmanagement_service.js"></script>
+	 <!-- ClassManagementService -->
+	<script src="~/Scripts/Academics/service/classManagement_Service.js"></script>
+	
+
+    <!--InstitutionRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/institutionregistration_controller.js"></script>
+    <!--EditInstitutionRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/institutionregistrationEdit_controller.js"></script>
+    <!--BranchRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/branchregistration_controller.js"></script>
+    <!--AdminRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/adminregistration_controller.js"></script>
+<!--calender -->
+ <script src="~/Scripts/Campus/controller/calender_controller.js"></script>
+ <!--calender -->
+ <script src="~/Scripts/AdminPanel/services/calender_service.js"></script>
+    <!--ITAdminRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/it_admin_registrationctrl.js"></script>
+    <!--BranchAdmin Registration-->
+    <script src="~/Scripts/AdminPanel/ctrl/branchadminregistration_controller.js"></script>
+    <!--StudentRegistration-->
+     <script src="~/Scripts/AdminPanel/ctrl/studentregistration_controller.js"></script>
+  	<!--guest -->
+	 <script src="~/Scripts/AdminPanel/ctrl/guest_controller.js"></script>
+     <!--userRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/userregistration_controller.js"></script>
+
+    <!--Student Admission-->
+    <script src="~/Scripts/AdminPanel/ctrl/studentadmission_controller.js"></script>
+<!-- Branch Syllabus allocation -->
+<script src="~/Scripts/Academics/controller/branch_syllabus_alloc_controller.js"></script>
+    <script src="~/Scripts/Academics/service/branch_syllabus_alloc_service.js"></script>
+    <!-- SERVICE SCRIPTS-->
+<script src="~/Scripts/AdminPanel/ctrl/certificate_design.js"></script>
+
+    <!--InstitutionRegistration-->
+    <script src="~/Scripts/AdminPanel/services/institutionregistration_ITAM_services.js"></script>
+    <!--EditInstitutionRegistration-->
+    <script src="~/Scripts/AdminPanel/services/institutionregistrationEdit_service.js"></script>
+     <!--BranchRegistration-->
+    <script src="~/Scripts/AdminPanel/services/branchregistration_service.js"></script>
+    <!--Admin Registration-->
+    <script src="~/Scripts/AdminPanel/services/adminregistration_service.js"></script>
+    <!--ITAdminRegistration-->
+    <script src="~/Scripts/AdminPanel/services/it_admin_registration_service.js"></script>
+	
+	
+	
+	<!--Library Issue and Return Service-->
+    <script src="~/Scripts/Library/service/library_issue_service.js"></script>
+  
+	<!--Library Configuration Service-->
+    <script src="~/Scripts/Library/service/library_configuration_service.js"></script>
+	
+    <!--BranchAdmin Registration-->
+	
+    <script src="~/Scripts/AdminPanel/services/branchadminregistration_services.js"></script>
+    <!--userRegistration-->
+    <script src="~/Scripts/AdminPanel/services/userregistration_service.js"></script>
+    <!--staffRegistration-->
+    <script src="~/Scripts/AdminPanel/ctrl/staffregistration_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/staffregistration_service.js"></script>
+    <!--Student Admission-->
+
+    <script src="~/Scripts/AdminPanel/services/studentadmission_service.js"></script>
+	<!--ExamManagement Service-->
+		<script src="~/Scripts/Exam/service/exam_management_service.js"></script>
+	
+	<!-- Inventory Management Service-->
+	<script src="~/Scripts/Library/service/inventory_management_service.js"></script>	
+    <!-- package pricing-->
+    <script src="~/Scripts/AdminPanel/services/packagepricing_service.js"></script>
+    <script src="~/Scripts/AdminPanel/ctrl/packagepricing_controller.js"></script>
+    <!--itadminpackagemodule-->
+    <script src="~/Scripts/AdminPanel/ctrl/ScreenModule_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/itadminpackagemodule_service.js"></script>
+
+
+    <!--BranchModule-->
+    <script src="~/Scripts/AdminPanel/ctrl/branchmodule_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/branchmodule_service.js"></script>
+
+    <!--Teacher Management-->
+    <script src="~/Scripts/Academics/controller/teacher_management_controller.js"></script>
+    <script src="~/Scripts/Academics/service/teacher_management_service.js"></script>
+
+    <!--User Screen Authorization-->
+    <script src="~/Scripts/AdminPanel/ctrl/userscreenauthorization_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/userscreenauthorization_service.js"></script>
+
+    <!--User Skin-->
+    <script src="~/Scripts/util/appCommonSkin.js"></script>
+    <script src="~/Scripts/AdminPanel/ctrl/userskin_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/userskin_service.js"></script>
+
+    <!--Menu List-->
+    <script src="~/Scripts/AdminPanel/ctrl/menuProfile_controller.js"></script>
+    <script src="~/Scripts/AdminPanel/services/menuProfile_service.js"></script>
+
+    <!--Maintenance Log-->
+    <script src="~/Scripts/AdminPanel/services/maintenancelog_service.js"></script>
+    <script src="~/Scripts/AdminPanel/ctrl/maintenancelog_controller.js"></script>
+
+
+	
+<!--body toggle start-->
+ <script>
+   $(document).ready(function(){
+    $(".tgg").click(function(e) {
+        e.preventDefault();
+        $("#side_tgg").toggleClass("toggled");
+    });
+});
+    </script>
+<link href="~/Content/Asserts/css/simple-sidebar.css" rel="stylesheet" type="text/css">
+<!--body toggle end -->
+	
+
+    </head>
+
+ <body class="no-skin" ng-app="single-page-app" style="background:linear-gradient(141deg, #285173 0%, #0bc5da 51%, #1d87af 75%);"> 
+	
+
+
+        <div>
+
+            <div id="navbar" class="navbar navbar-default          kbr-save-state">
+                <div class="navbar-container kbr-save-state" id="navbar-container">
+                    <button type="button" class="navbar-toggle menu-toggler pull-left tgg" id="menu-toggler" data-target="#sidebar">
+                        <span class="sr-only">Toggle sidebar</span>
+       
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <div class="navbar-header pull-left container_logo col-bg col-xs-12 col-sm-4 col-md-2 brand">
+                        <div class="logo-header" >
+                        @*<a href="index.html" class="navbar-brand">*@
+                    
+                            <img src="~/Content/Asserts/img/logo.png" /> Edu Shell
+                  
+                        </div>
+                       @*</a>*@
+                    </div>
+                <div  class="pull-left">
+<div class="time_row"><span id="timeId" ></span></div>
+<div class="time_row"><span >@ViewBag.EmailId</span></div>
+			
+
+                </div>
+
+                
+
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                    <ul class="nav kbr-nav">
+                        <li class="dropdown-modal drop">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="">
+                                <i class="kbr-icon fa fa-tasks"></i>
+                                <span class="badge badge-grey">4</span>
+                            </a>
+
+                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close  dropdown-content_2 animated flipInX">
+                                <li class="dropdown-header">
+                                    <i class="menu-icon fa fa-check"></i>
+                                    4 Tasks to complete
+                                </li>
+
+                                <li class="dropdown-content">
+                                    <ul class="dropdown-menu dropdown-navbar">
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Software Update</span>
+                                                    <span class="pull-right">65%</span>
+                                                </div>
+
+                                                <div class="progress progress-mini">
+                                                    <div style="width:65%" class="progress-bar"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Hardware Upgrade</span>
+                                                    <span class="pull-right">35%</span>
+                                                </div>
+
+                                                <div class="progress progress-mini">
+                                                    <div style="width:35%" class="progress-bar progress-bar-danger"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Unit Testing</span>
+                                                    <span class="pull-right">15%</span>
+                                                </div>
+
+                                                <div class="progress progress-mini">
+                                                    <div style="width:15%" class="progress-bar progress-bar-warning"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Bug Fixes</span>
+                                                    <span class="pull-right">90%</span>
+                                                </div>
+
+                                                <div class="progress progress-mini progress-striped active">
+                                                    <div style="width:90%" class="progress-bar progress-bar-success"></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-footer">
+                                    <a href="">
+                                        See tasks with details
+                                        <i class="menu-icon fa fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        
+
+                        <li class="dropdown-modal drop">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="">
+                                <i class="kbr-icon fa fa-bell icon-animated-bell"></i>
+                                <span class="badge badge-important">8</span>
+                            </a>
+
+                            <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close dropdown-content_2 animated flipInX">
+                                <li class="dropdown-header">
+                                    <i class="menu-icon fa fa-exclamation-triangle"></i>
+                                    8 Notifications
+                                </li>
+
+                                <li class="dropdown-content">
+                                    <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">
+                                                        <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+                                                        New Comments
+                                                    </span>
+                                                    <span class="pull-right badge badge-info">+12</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <i class="btn btn-xs btn-primary fa fa-user"></i>
+                                                Bob just signed up as an editor ...
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">
+                                                        <i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+                                                        New Orders
+                                                    </span>
+                                                    <span class="pull-right badge badge-success">+8</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">
+                                                        <i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+                                                        Followers
+                                                    </span>
+                                                    <span class="pull-right badge badge-info">+11</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-footer">
+                                    <a href="">
+                                        See all notifications
+                                        <i class="kbr-icon fa fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-modal drop">
+                            <a data-toggle="dropdown" class="dropdown-toggle menu-icon" href="">
+                                <i class="kbr-icon fa fa-envelope icon-animated-vertical"></i>
+                                <span class="badge badge-success">5</span>
+                            </a>
+
+                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close dropdown-content_2 animated flipInX">
+                                <li class="dropdown-header menu-icon">
+                                    <i class="kbr-icon fa fa-envelope-o"></i>
+                                    5 Messages
+                                </li>
+
+                                <li class="dropdown-content">
+                                    <ul class="dropdown-menu dropdown-navbar">
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <img src="~/Content/Asserts/img/avatar.png" class="msg-photo" />
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="blue">Alex:</span>
+                                                        Ciao sociis natoque penatibus et auctor ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="kbr-icon fa fa-clock-o"></i>
+                                                        <span>a moment ago</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <img src="~/Content/Asserts/img/avatar3.png" class="msg-photo" />
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="blue">Susan:</span>
+                                                        Vestibulum id ligula porta felis euismod ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="kbr-icon fa fa-clock-o"></i>
+                                                        <span>20 minutes ago</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <img src="~/Content/Asserts/img/avatar4.png" class="msg-photo" />
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="blue">Bob:</span>
+                                                        Nullam quis risus eget urna mollis ornare ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="kbr-icon fa fa-clock-o"></i>
+                                                        <span>3:15 pm</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <img src="~/Content/Asserts/img/avatar2.png" class="msg-photo" />
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="blue">Kate:</span>
+                                                        Ciao sociis natoque eget urna mollis ornare ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="kbr-icon fa fa-clock-o"></i>
+                                                        <span>1:33 pm</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="" class="clearfix">
+                                                <img src="~/Content/Asserts/img/avatar5.png" class="msg-photo" />
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="blue">Fred:</span>
+                                                        Vestibulum id penatibus et auctor  ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="kbr-icon fa fa-clock-o"></i>
+                                                        <span>10:09 am</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown-footer">
+                                    <a href="">
+                                        See all messages
+                                        <i class="kbr-icon fa fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-modal drop">
+                            <a data-toggle="dropdown" href="" class="dropdown-toggle">
+                                
+                                <img  class="nav-user-photo" src="~/UploadFiles/User/@ViewBag.ProfilePath" width="36px" height="36px" />
+                                <span class="user-info">
+                                    <small>Welcome,</small>
+                                    @ViewBag.FirstName
+                                </span>
+
+                                <i class="kbr-icon fa fa-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close welcome_pop dropdown-content_2 animated flipInX" style="background-color:#ECF2F7;">
+                                <li>
+                                    <a href="">
+                                        <i class="kbr-icon fa fa-cog"></i>
+                                        Settings
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="">
+                                        <i class="kbr-icon fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="~/Home/Login">
+                                        <i class="kbr-icon fa fa-power-off"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.navbar-container -->
+        </div>
+
+        <div class="main-container kbr-save-state" id="main-container">
+
+            <script type="text/javascript">
+				try{kbr.settings.loadState('main-container')}catch(e){}
+            </script>
+
+
+           
+            <div class="main-content" id="side_tgg">
+
+
+
+
+                <div class="col-md-3_2">
+                    <div id="sidebar" class="sidebar responsive menu-min akbr-save-state sidebar-fixed sidebar-scroll" data-sidebar="true" data-sidebar-scroll="true" data-sidebar-hover="true">
+                        <script type="text/javascript">
+					try{kbr.settings.loadState('sidebar')}catch(e){}
+                        </script>
+
+
+
+                        <div ng-controller="MenuListCtrl">
+                            <div>
+                                <nav class="navbar navbar-inverse" role="navigation" style="padding-top:-10px;">
+                                    <div class="nav navbar-nav">
+                                        <ul class="nav nav-list">
+                                            
+
+                                            <li class="animated zoomIn" ng-repeat="a in ListModule">
+                                                <a href="" onclick="appMenuLink(this)" data-TargetSrc="{{a.ScreenPath}}">
+                                                    <i class="{{a.CssClassName}}"></i>
+                                                    <span class="menu-text  animated fadeInLeft" ng-bind="a.ModuleName"> </span>
+                                                </a>
+
+                                                <b class="arrow"></b>
+
+                                                <ul class="submenu  animated animated fadeInLeft">
+                                                    <li class=""  ng-if="a.ListSubModule[0].SubModuleName == ''" ng-repeat="c in a.ListSubModule[0].ListModulesData">
+                                                        <a href="" onclick="appMenuLink(this)" data-TargetSrc="{{c.FileName}}">
+                                                            <img ng-if="c.FilePath !=''" src="~/Content/Asserts/img/{{c.FilePath}}">
+                                                            {{c.ScreenName}}
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown" ng-if="b.SubModuleName != ''" ng-repeat="b in a.ListSubModule">
+                                                        <a href="" onclick="appMenuLink(this)"  data-TargetSrc="{{b.ListModulesData[0].FileName}}">
+                                                            <img ng-if="b.ListModulesData[0].FilePath !=''" src="~/Content/Asserts/img/{{b.ListModulesData[0].FilePath}}">
+                                                            {{b.SubModuleName}}
+                                                            <i class="fa fa-angle-double-right blue_cor marg_left_10"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-content animated fadeInLeft">
+                                                            <i class="fa fa-caret-left pull-left drop_arrow" aria-hidden="true"></i>
+                                                            <a href="" onclick="appMenuLink(this)"   data-TargetSrc="{{c.FileName}}" ng-repeat="c in b.ListModulesData" > {{c.ScreenName}} </a>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+
+
+                                                @*<ul class="submenu  animated animated fadeInLeft" ng-if="a.ListSubModule[0].SubModuleName != ''">
+                                                    <li class="" ng-repeat="c in a.ListSubModule[0].ListModulesData">
+                                                        <a href="" onclick="appMenuLink(this)" data-TargetSrc="{{c.FileName}}">
+                                                            <img ng-if="c.FilePath !=''" src="~/Content/Asserts/img/{{c.FilePath}}">
+                                                            {{c.ScreenName}}
+                                                        </a>
+
+
+                                                    </li>
+
+                                                </ul>*@
+                                    
+                                           
+                                                    @*<li class="dropdown">
+                                                        <a href="" onclick="link('#/grades')">
+                                                            <img src="~/Content/Asserts/img/exam_icon_grade.png">
+                                                            Grades
+                                                            <i class="fa fa-angle-double-right blue_cor marg_left_10"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-content animated fadeInLeft">
+                                                            <i class="fa fa-caret-left pull-left drop_arrow" aria-hidden="true"></i>
+                                                            <a href="" onclick="link('#/grades')"> Grades & Scores </a>
+                                                            <a href="" onclick="link('#/weightage')">Grades Weightage</a>
+                                                        </div>
+                                                    </li>*@
+                                             
+
+                                            </li>
+
+                                    
+
+
+
+
+                                        </ul><!-- /.nav-list -->
+
+
+
+                                    </div>
+                                </nav>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+				
+				
+				
+				<div class="container col-bg col-xs-12 col-sm-4 col-md-16 brand">
+                    <div class="row">
+                        <div class="profile-header-container">
+                            <div class="profile-header-img">
+                                @if (ViewBag.MainInstitutionLogo != null)
+                                {
+                                     <img class="img-circle" style="border:none" src="~/UploadFiles/MainInstitution/@ViewBag.MainInstitutionLogo">
+                                }
+                                else
+                                {
+                                    <img class="img-circle" src="~/Content/Asserts/img/user.png">
+                                      <!-- badge -->
+                                    <div class="rank-label-container">
+                                        <span class="label label-default rank-label">Oakridge</span>
+                                    </div>
+                                }
+                              
+                            </div>
+                        </div>
+                    </div>
+					
+					 <div class="widget-box transparent">
+                        <div></div>
+
+
+                        <table id="calendar-demo" class="calendar"></table>
+
+
+
+
+                    </div>
+
+                    <div class="widget-box transparent">
+                        <div class="widget-header">Latest Events</div>
+
+                        <div class="widget-body" style="overflow-y:auto; height:170px;">
+                            <div class="widget-main no-padding">
+                                <ul class="list-unstyled list-striped pricing-table-header">
+                                    <li>Annual Exams Details </li>
+                                    <li>Exam Fee Details </li>
+                                    <li>Parents Meeting </li>
+                                    <li>Special Classes </li>
+                                    <li>Exam Fee Details </li>
+									<li>Annual Exams Details </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+
+
+
+                </div>
+<!-- Google Translate -->
+<!--<div id="google_translate_element"></div>-->
+                <div ng-view id="ngView" class="col-xs-12 col-md-10a col-sm-8"></div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div id="style-selector"  onMouseOver="show_sidebar()" onMouseOut="hide_sidebar()" ng-controller="UserSkinctrl">
+
+        <div class="style-selector-wrapper" >
+            <span class="title">Change Skin</span>
+            <div>
+                <br><br>
+
+
+                <!-- end Predefined Color Skins -->
+
+              
+                <ul class="styles" id="switcher" > 
+                    <li id="pattern1Button" ng-repeat="b in skin.ListUserSkinData" data-ng-click="evt.btnUpdate(b)">
+                    <a href=""><span class="{{b.CssClassName}}"></span>
+                     </a>
+                    </li> 
+
+					
+					
+
+                </ul>
+
+                <a href="" class="close icon-chevron-right"></a>
+
+            </div>
+        </div>
+    </div><!-- end style switcher -->
+
+	
+
+	
+
+  <script src="~/Content/Asserts/js/jquery-1.11.3.min.js"></script>
+
+    <script src="~/Content/Asserts/js/dcalendar.picker.js"></script>
+	
+
+    <script>
+$('#demo').dcalendarpicker();
+$('#calendar-demo').dcalendar(); //creates the calendar
+    </script>
+	<!-- script for google Translate 
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+
+
+    <!-- inline scripts related to this page -->
+  
+ <link rel='stylesheet prefetch' href='~/Content/Asserts/css/fontss.css'>
+<link rel='stylesheet prefetch' href='~/Content/Asserts/css/icon.css'>
+  <script src='~/Content/Asserts/js/jquery.min.js'></script> 
+
+
+
+    <script src="~/Content/Asserts/js/styleselector.js"></script>
+    <script src="~/Content/Asserts/js/jquery-main.js"></script>
+
+    <script src="~/Content/Asserts/js/kbr-elements.min.js"></script>
+    <script src="~/Content/Asserts/js/kbr.min.js"></script>
+<script>
+
+function link(a)
+{
+console.log('the link is:'+a);
+console.log(rootCheck);
+if(rootCheck==1)
+{
+rootCheck=0;
+bootbox.confirm({
+title:"   ",
+message:"<center>Unsaved changes on  Current Screen.<br><br>Do you want to proceed?</center>",
+buttons: {
+	     cancel: {
+            label: 'No',
+            //className: 'btn-danger'
+        },
+        confirm: {
+            label: 'Yes',
+           // className: 'btn-success'
+        }
+      
+    },	
+	callback:function(result){
+	if(result==true)
+	{rootCheck=0;location.href=a;}
+	else{rootCheck=1;console.log("pressed no")};
+	}
+})}
+else 
+{
+location.href=a;
+}
+}
+</script>
+    <script type="text/javascript">
+			jQuery(function($) {
+			   $('#sidebar2').insertBefore('.page-content');
+
+			   $('.navbar-toggle[data-target="#sidebar2"]').insertAfter('#menu-toggler');
+
+
+			   $(document).on('settings.kbr.two_menu', function(e, event_name, event_val) {
+				 if(event_name == 'sidebar_fixed') {
+					 if( $('#sidebar').hasClass('sidebar-fixed') ) {
+						$('#sidebar2').addClass('sidebar-fixed');
+						$('#navbar').addClass('h-navbar');
+					 }
+					 else {
+						$('#sidebar2').removeClass('sidebar-fixed')
+						$('#navbar').removeClass('h-navbar');
+					 }
+				 }
+			   }).triggerHandler('settings.kbr.two_menu', ['sidebar_fixed' ,$('#sidebar').hasClass('sidebar-fixed')]);
+			})
+    </script>
+
+
+
+
+<script src="~/Content/Asserts/js/jquery-1.7.2.min.js"></script>
+
+
+<script>
+$('tbody tr').live('click', function(event) {
+    $clicked_tr = $(this);
+    $clicked_tr.parent().children().each(function() {
+        $(this).removeClass('highlight')
+    });
+    $clicked_tr.addClass('highlight');
+});
+</script>
+
+
+
+
+<script>
+
+
+var selected = null, // Object of the element to be moved
+    x_pos = 0, y_pos = 0, // Stores x & y coordinates of the mouse pointer
+    x_elem = 0, y_elem = 0; // Stores top, left values (edge) of the element
+	document.onmousemove = _move_elem;
+document.onmouseup = _destroy;
+//for dragaable
+function click12()
+{
+
+console.log("entering click12");
+
+var a = document.getElementById('myModal1')
+console.log(a);
+a.onmousedown = function () {
+    _drag_init(this);
+	console.log("mousedown")
+    return false;
+};
+/*var a = document.getElementsByClassName('modal-dialog');
+console.log(a);
+for(var i=0;i<a.length;i++){
+a[i].onmousedown = function () {
+    _drag_init(this);
+    return false;
+};}*/
+
+}
+function _drag_init(elem) {
+    // Store the object of the element which needs to be moved
+    selected = elem;
+    x_elem = x_pos - selected.offsetLeft;
+    y_elem = y_pos - selected.offsetTop;
+}
+
+// Will be called when user dragging an element
+function _move_elem(e) {
+    x_pos = document.all ? window.event.clientX : e.pageX;
+    y_pos = document.all ? window.event.clientY : e.pageY;
+    if (selected !== null) {
+        selected.style.left = (x_pos - x_elem) + 'px';
+        selected.style.top = (y_pos - y_elem) + 'px';
+    }
+}
+
+// Destroy the object when we are done
+function _destroy() {
+    selected = null;
+}
+</script>
+<!-- chat on click close script  end -->
+
+
+  <script src='~/Content/Asserts/js/jquery-3.1.0.js'></script>
+
+    <script src="~/Content/Asserts/js/chat_index.js"></script>
+
+
+<!-- Chat End Here-->
+
+<script>
+
+$("li").on("click", function (ev) {
+    var $tgt = $(ev.target).closest("li");
+    $tgt.addClass("selected")
+        .siblings().removeClass("selected");
+});
+
+</script>
+<script>
+	
+
+// Will be called when user starts dragging an element
+
+// Bind the functions...
+
+
+
+
+ $(this).find('.modal-body').css({
+        'max-height': '100%'
+      });
+		</script>
+
+</body>
+</html>
+
+
+
+
+
